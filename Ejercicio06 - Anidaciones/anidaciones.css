@@ -5,7 +5,7 @@
     margin: 10px;
     text-align: center;
     color:rgb(14, 26, 97);
-    text-decoration: none;
+    text-indent: 0;
 }
 
 .boton:hover{
@@ -13,10 +13,20 @@
     color:white;
 }
 
+
 .boton::before{
     content: "Pasa por encima";
 }
 
-.boton:visited{
+.boton::after{
     content: "¡Hecho!";
+    opacity: 0;
+}
+
+.boton:hover::before{
+    opacity: 0;
+}
+
+.boton:hover::after{
+    opacity: 1;
 }
